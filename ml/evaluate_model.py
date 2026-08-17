@@ -134,15 +134,3 @@ print(cm)
 # =========================
 
 print("\nClassification Report:")
-
-print(
-    classification_report(
-        y_test,
-        y_pred,
-        target_names=[
-            "Approved",
-            "Denied"
-        ],
-        zero_division=0
-    )
-)
