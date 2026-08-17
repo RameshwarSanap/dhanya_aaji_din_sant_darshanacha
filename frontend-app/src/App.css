@@ -1,0 +1,392 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+header p {
+  margin-top: 10px;
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+/* =========================
+   PREDICTION FORM
+========================= */
+
+.card {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 35px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 18px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 28px;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-bottom: 30px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-size: 14px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #38bdf8;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* =========================
+   PREDICT BUTTON
+========================= */
+
+.predict-btn {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.predict-btn:hover {
+  background: #1d4ed8;
+}
+
+.predict-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* =========================
+   RESULT DASHBOARD
+========================= */
+
+.result-card {
+  width: 100%;
+  max-width: 700px;
+  margin: 40px auto 0;
+  padding: 40px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+.result-header {
+  margin-bottom: 30px;
+}
+
+.result-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.result-header h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.result-header p {
+  color: #94a3b8;
+  margin-top: 8px;
+}
+
+/* =========================
+   PROBABILITY
+========================= */
+
+.probability-section {
+  padding: 30px;
+  margin-bottom: 25px;
+  background: #0f172a;
+  border-radius: 16px;
+  border: 1px solid #334155;
+}
+
+.probability-label {
+  display: block;
+  color: #94a3b8;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.probability-value {
+  font-size: 58px;
+  font-weight: 800;
+}
+
+.probability-high {
+  color: #f87171;
+}
+
+.probability-low {
+  color: #4ade80;
+}
+
+/* =========================
+   PROBABILITY PROGRESS BAR
+========================= */
+
+.probability-bar {
+  width: 100%;
+  height: 10px;
+  margin-top: 18px;
+  background: #334155;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.probability-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.8s ease;
+}
+
+.probability-fill.high {
+  background: #ef4444;
+}
+
+.probability-fill.low {
+  background: #22c55e;
+}
+
+/* =========================
+   RESULT DETAILS
+========================= */
+
+.result-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.result-item {
+  padding: 20px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 14px;
+}
+
+.result-item span {
+  display: block;
+  color: #94a3b8;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.result-item strong {
+  display: block;
+  font-size: 16px;
+}
+
+.risk-high {
+  color: #f87171;
+}
+
+.risk-low {
+  color: #4ade80;
+}
+
+.decision-denied {
+  color: #f87171;
+}
+
+.decision-approved {
+  color: #4ade80;
+}
+
+/* =========================
+   CLAIM INFORMATION
+========================= */
+
+.claim-summary {
+  margin-top: 25px;
+  margin-bottom: 30px;
+  padding: 25px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.claim-summary h3 {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size: 20px;
+  color: #e2e8f0;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.summary-item {
+  padding: 14px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+}
+
+.summary-item span {
+  display: block;
+  margin-bottom: 6px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.summary-item strong {
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+/* =========================
+   NEW PREDICTION
+========================= */
+
+.new-prediction-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #334155;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.new-prediction-btn:hover {
+  background: #475569;
+}
+
+/* =========================
+   ERROR
+========================= */
+
+.error-box {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #450a0a;
+  border: 1px solid #7f1d1d;
+  color: #fca5a5;
+  text-align: center;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+  .app {
+    padding: 25px 15px;
+  }
+
+  .card,
+  .result-card {
+    padding: 25px 20px;
+  }
+
+  header h1 {
+    font-size: 32px;
+  }
+
+  .form-grid,
+  .result-details,
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width {
+    grid-column: auto;
+  }
+
+  .probability-value {
+    font-size: 46px;
+  }
+}
